@@ -1,20 +1,10 @@
-<ion-content [fullscreen]="true">
-    <button ion-button full icon-only>
-    <ion-icon name="shuffle-outline"></ion-icon>
-  </button>
-
-  <button ion-button full icon-only>
-    <ion-icon defaulthref="home2" name="home"></ion-icon>
-  </button>
-
-  <button ion-button full icon-only>
-    <ion-icon name="file-tray-outline"></ion-icon>
-  </button>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>nuevo producto</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
 </ion-content>
-
-
-
-no se si ebviar el error desde aqui o  desde cada pantalla
 <!-- esto como mensaje -->
 <!-- se encuentra invisible con la propiedad *ngIf="!status" para volver a visible usas *ngIf="status"-->
 <ion-card *ngIf="!status">
@@ -32,3 +22,21 @@ no se si ebviar el error desde aqui o  desde cada pantalla
     <ion-button fill="outline" slot="end">ok</ion-button>
   </ion-item>
 </ion-card>
+
+
+<ion-item>
+  <ion-label position="stacked">ID</ion-label>
+  <ion-input></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="stacked">nombre</ion-label>
+  <ion-input></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="stacked">cantidad </ion-label>
+  <ion-input></ion-input>
+</ion-item>
+<ion-button color="secondary">enviar</ion-button>
+
+
+
