@@ -4,6 +4,7 @@ import { AddProductPage } from './componet/add-product/add-product.page';
 import { CenterXPage } from './componet/center-x/center-x.page';
 import { HomeComponent } from './componet/home/home.component';
 import { NewProductPage } from './componet/new-product/new-product.page';
+import { PaginaPage } from './componet/pagina/pagina.page';
 import { ProfileComponent } from './componet/profile/profile.component';
 
 const routes: Routes = [
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path:"home4",component:AddProductPage},
   {path:"home5",component:NewProductPage},
   {path:"home6",component:CenterXPage},
+  {path:"home7",component:PaginaPage},
   {
     path: 'add-product',
     loadChildren: () => import('./componet/add-product/add-product.module').then( m => m.AddProductPageModule)
