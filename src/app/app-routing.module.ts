@@ -38,7 +38,11 @@ const routes: Routes = [
   {
     path: 'pagina',
     loadChildren: () => import('./componet/pagina/pagina.module').then( m => m.PaginaPageModule)
+  },  {
+    path: 'crear-producto',
+    loadChildren: () => import('./crear-producto/crear-producto.module').then( m => m.CrearProductoPageModule)
   }
+
 
 ];
 

@@ -1,34 +1,12 @@
-<ion-content class="iconos">
-    <button ion-button full icon-only>
-    <ion-icon name="shuffle-outline"></ion-icon>
-  </button>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
 
-  <button ion-button full icon-only>
-    <ion-icon defaulthref="home2" name="home"></ion-icon>
-  </button>
-
-  <button ion-button full icon-only>
-    <ion-icon name="file-tray-outline"></ion-icon>
-  </button>
-</ion-content>
-
-
-
-no se si enviar el error desde aqui o  desde cada pantalla
-<!-- esto como mensaje -->
-<!-- se encuentra invisible con la propiedad *ngIf="!status" para volver a visible usas *ngIf="status"-->
-<ion-card *ngIf="!status">
-  <ion-item>
-    <ion-icon name="alert-outline" slot="start"></ion-icon>
-    <ion-label>error</ion-label>
-    <ion-button fill="outline" slot="end">ok</ion-button>
+<ion-list>
+  <ion-item *ngFor="let item of items">
+    <ion-thumbnail slot="start">
+      <ion-img src="image/CajaMenu.png"></ion-img>
+    </ion-thumbnail>
+    <ion-label>{{item.text}}</ion-label>
   </ion-item>
-</ion-card>
-
-<ion-card *ngIf="!status">
-  <ion-item >
-    <ion-icon name="checkmark-outline" slot="start"></ion-icon>
-    <ion-label>agregado</ion-label>
-    <ion-button fill="outline" slot="end">ok</ion-button>
-  </ion-item>
-</ion-card>
+</ion-list>
