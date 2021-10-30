@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { AddProductPageRoutingModule } from './add-product-routing.module';
+import { EnviarCentroPageRoutingModule } from './enviar-centro-routing.module';
 
-import { AddProductPage } from './add-product.page';
+import { EnviarCentroPage } from './enviar-centro.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    AddProductPageRoutingModule
+    EnviarCentroPageRoutingModule
   ],
-  declarations: [AddProductPage]
+  declarations: [EnviarCentroPage]
 })
-export class AddProductPageModule {}
+export class EnviarCentroPageModule {}

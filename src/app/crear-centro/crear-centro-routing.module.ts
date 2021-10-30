@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { CenterXPage } from './center-x.page';
+import { CrearCentroPage } from './crear-centro.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: CenterXPage
+    component: CrearCentroPage
   }
 ];
 
@@ -14,4 +14,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class CenterXPageRoutingModule {}
+export class CrearCentroPageRoutingModule {}

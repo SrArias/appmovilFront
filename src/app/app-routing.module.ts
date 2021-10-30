@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+
+/*
 import { AddProductPage } from './componet/add-product/add-product.page';
 import { CenterXPage } from './componet/center-x/center-x.page';
 import { HomeComponent } from './componet/home/home.component';
 import { NewProductPage } from './componet/new-product/new-product.page';
 import { PaginaPage } from './componet/pagina/pagina.page';
 import { ProfileComponent } from './componet/profile/profile.component';
-
+*/
 const routes: Routes = [
   {
     path: 'home',
@@ -17,6 +19,7 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  /*
   {path:"home2",component:HomeComponent},
   {path:"home3",component:ProfileComponent},
   {path:"home4",component:AddProductPage},
@@ -38,9 +41,23 @@ const routes: Routes = [
   {
     path: 'pagina',
     loadChildren: () => import('./componet/pagina/pagina.module').then( m => m.PaginaPageModule)
-  },  {
+  },
+  */
+  {
     path: 'crear-producto',
     loadChildren: () => import('./crear-producto/crear-producto.module').then( m => m.CrearProductoPageModule)
+  },
+  {
+    path: 'crear-centro',
+    loadChildren: () => import('./crear-centro/crear-centro.module').then( m => m.CrearCentroPageModule)
+  },
+  {
+    path: 'enviar-centro',
+    loadChildren: () => import('./enviar-centro/enviar-centro.module').then( m => m.EnviarCentroPageModule)
+  },
+  {
+    path: 'devoluciones',
+    loadChildren: () => import('./devoluciones/devoluciones.module').then( m => m.DevolucionesPageModule)
   }
 
 

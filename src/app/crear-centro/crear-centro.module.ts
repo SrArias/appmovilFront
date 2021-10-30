@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { PaginaPageRoutingModule } from './pagina-routing.module';
+import { CrearCentroPageRoutingModule } from './crear-centro-routing.module';
 
-import { PaginaPage } from './pagina.page';
+import { CrearCentroPage } from './crear-centro.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PaginaPageRoutingModule
+    CrearCentroPageRoutingModule
   ],
-  declarations: [PaginaPage]
+  declarations: [CrearCentroPage]
 })
-export class PaginaPageModule {}
+export class CrearCentroPageModule {}

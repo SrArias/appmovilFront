@@ -1,17 +1,30 @@
+<ion-header class="center">
+  <ion-toolbar>
+    <ion-title color="medium" size="small"><h1>Categorias</h1></ion-title>
+  </ion-toolbar>
+</ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Categorias</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-Item-group>
+<ion-item>
+<ion-fab-button class="btn" (click)="this.prueba()"  color="dark" ion-button full icon-only><ion-icon class="bigicon" name="reader-outline"></ion-icon> </ion-fab-button>
+<ion-fab-button class="btn"  color="dark" ion-button full icon-only><ion-icon class="bigicon" name="reader-outline"></ion-icon> </ion-fab-button>
+<ion-fab-button class="btn"  color="dark" ion-button full icon-only><ion-icon class="bigicon" name="reader-outline"></ion-icon> </ion-fab-button>
+</ion-item>
 
-</ion-content>
-<ion-content>
+<ion-item>
+<ion-label color="secondary" class="txt1"><h4> Tecnología</h4></ion-label>
+<ion-label color="secondary" class="txt1"><h4>      Papelería</h4></ion-label>
+<ion-label color="secondary" class="txt1"><h4>      Vivienda</h4></ion-label>
+</ion-item>
 
-    <ion-fab-button (click)="this.prueba()" size="large" color="dark">categoria 1</ion-fab-button> 
-    <ion-fab-button size="large" color="dark">categoria 1</ion-fab-button>
+<ion-item>
+<ion-fab-button class="btn"  color="dark" ion-button full icon-only><ion-icon class="bigicon" name="reader-outline"></ion-icon> </ion-fab-button>
+<ion-fab-button class="btn"  color="dark" ion-button full icon-only><ion-icon class="bigicon"name="reader-outline"></ion-icon> </ion-fab-button>
+</ion-item>
+<ion-item>
+<ion-label color="secondary" class="txt2"><h4 >‎‎‎‎‎‎Alimentos</h4></ion-label>
+<ion-label color="secondary" class="txt2"><h4>Movilidad</h4></ion-label>
 
-  
-</ion-content>
+</ion-item>
 
+</ion-Item-group>
