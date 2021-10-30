@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>productos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Cantidad</th>
+        <th scope="col">Fecha de ingreso</th>
+    
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let productos of listproduct">
+        <th>{{productos.strnomprod}}</th>
+        <th>{{productos.intuniprod}}</th>
+        <th>{{productos.dtfecha_ingreso | date:'dd/MM/yyy hh:mm'}}</th>
+       
+      </tr>
+
+    </tbody>
+  </table>
+
+</ion-content>

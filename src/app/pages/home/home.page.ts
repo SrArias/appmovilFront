@@ -9,6 +9,7 @@ import { CategoriesService } from 'src/app/services/categories/categories.servic
 })
 export class HomePage implements OnInit {
   private listcategories: any;
+  
   constructor(private router: Router, private categories: CategoriesService) {}
 
   ngOnInit() {
@@ -16,8 +17,9 @@ export class HomePage implements OnInit {
   }
 
   prueba(msg) {
-    //this.router.navigate(['/home7']);
-    alert(msg);
+    
+    this.router.navigate([`/productos/${msg}`]);
+   
   }
 
   getcategories = async () => {

@@ -44,12 +44,12 @@ const routes: Routes = [
   },
   */
   {
-    path: 'crear-producto',
-    loadChildren: () => import('./crear-producto/crear-producto.module').then( m => m.CrearProductoPageModule)
+    path: 'crear-producto/:id',
+    loadChildren: () => import('./pages/crear-producto/crear-producto.module').then( m => m.CrearProductoPageModule)
   },
   {
     path: 'crear-centro',
-    loadChildren: () => import('./crear-centro/crear-centro.module').then( m => m.CrearCentroPageModule)
+    loadChildren: () => import('./pages/crear-centro/crear-centro.module').then( m => m.CrearCentroPageModule)
   },
   {
     path: 'enviar-centro',
@@ -57,8 +57,13 @@ const routes: Routes = [
   },
   {
     path: 'devoluciones',
-    loadChildren: () => import('./devoluciones/devoluciones.module').then( m => m.DevolucionesPageModule)
+    loadChildren: () => import('./pages/devoluciones/devoluciones.module').then( m => m.DevolucionesPageModule)
+  },
+  {
+    path: 'productos/:id',
+    loadChildren: () => import('./pages/productos/productos.module').then( m => m.ProductosPageModule)
   }
+
 
 
 ];
