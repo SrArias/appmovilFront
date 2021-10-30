@@ -30,7 +30,7 @@ export class EnviarCentroPage implements OnInit {
   };
 
   getproducts = async ($intidcat) => {
-    await this.product.getcategories($intidcat.detail.value).subscribe(
+    await this.product.getProductos($intidcat.detail.value).subscribe(
       (res: any) => {
         this.listproduct = res;
       },

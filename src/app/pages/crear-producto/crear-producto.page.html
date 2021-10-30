@@ -4,29 +4,29 @@
   </ion-toolbar>
 </ion-header>
 
+
 <ion-content>
-
-  <form [formGroup]="formGroup">
-<!-- Textarea in an item with a floating label -->
-<ion-item>
-  <ion-label position="floating">ID</ion-label>
-  <ion-textarea formControlName="idprod"></ion-textarea>
-</ion-item>
-
-
-<!-- Textarea in an item with a floating label -->
-<ion-item>
-  <ion-label position="floating">Nombre</ion-label>
-  <ion-textarea formControlName="strnomprod"></ion-textarea>
-</ion-item>
-
-<!-- Textarea in an item with a floating label -->
-<ion-item  >
-  <ion-label position="floating">Cantidad</ion-label>
-  <ion-input type="number" formControlName="intuniprod"></ion-input>
-</ion-item>
+  <form [formGroup]="productosGroup">
+    <!-- Textarea in an item with a floating label -->
+    <ion-item>
+      <ion-label position="floating">ID</ion-label>
+      <ion-input placeholder="id del producto" formControlName="idprod"></ion-input>
+    </ion-item>
 
 
-<ion-button color="light" (click)="this.enviar()">Agregar</ion-button>
-</form>
+    <!-- Textarea in an item with a floating label -->
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-textarea formControlName="strnomprod"></ion-textarea>
+    </ion-item>
+
+    <!-- Textarea in an item with a floating label -->
+    <ion-item>
+      <ion-label position="floating">Cantidad</ion-label>
+      <ion-input type="number" formControlName="intuniprod"></ion-input>
+    </ion-item>
+
+
+    <ion-button (click)="this.enviar()" color="light">Agregar</ion-button>
+  </form>
 </ion-content>

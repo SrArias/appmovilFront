@@ -5,11 +5,14 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class ProductsService {
-  private url = 'http://localhost:3000/product/one';
+  private url = 'http://localhost:3000/product';
   constructor(private http: HttpClient) {}
 
-  getcategories = (intidcat) =>
-    this.http.get<any>(`${this.url}`, {
+  getProductos = (intidcat) =>
+    this.http.get<any>(`${this.url}/one`, {
       params: { intidcat },
     });
+
+  crearProductos = (dataproductos) =>
+    this.http.post(`${this.url}`, dataproductos);
 }

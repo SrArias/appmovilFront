@@ -16,7 +16,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'crear-producto/1',
     pathMatch: 'full'
   },
   /*

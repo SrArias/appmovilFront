@@ -9,23 +9,26 @@ import { ProductsService } from 'src/app/services/products/products.service';
 })
 export class ProductosPage implements OnInit {
   private listproduct: any;
-  constructor(private Actiedroute: ActivatedRoute,private product: ProductsService) {}
+  constructor(
+    // eslint-disable-next-line @typescript-eslint/naming-convention
+    private Actiedroute: ActivatedRoute,
+    private product: ProductsService
+  ) {}
 
   ngOnInit() {
     try {
       this.Actiedroute.paramMap.subscribe((paramMap) => {
         this.getproducts(paramMap.get('id'));
-        
       });
     } catch (error) {
       console.log(error);
     }
   }
 
-  getproducts = async(id) => {
-    await this.product.getcategories(id).subscribe(
+  getproducts = async (id) => {
+    await this.product.getProductos(id).subscribe(
       (res: any) => {
-        this.listproduct=res
+        this.listproduct = res;
       },
       (err) => {
         console.log(err);
