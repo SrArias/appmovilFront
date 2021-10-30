@@ -1,38 +1,24 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+.center{
+  left : auto;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-.iconos{
-  top: 50%;
-  font-size: 16px;
-  line-height: 22px;
-}
-#container p {
-  font-size: 16px;
-  line-height: 22px;
+.btn{
+  border-radius: 0px;
+  width:112px;
+  height:112px;
+  margin: auto;
 
-  color: #8c8c8c;
 
-  margin: 0;
 }
-
-#container a {
-  text-decoration: none;
+.txt1{
+  padding-left: 30px;
+padding-bottom: 13px;
 }
-
-.cajaMenu {  
-  width: -100%; height: -100%;
-  margin-top: 18%;
-    margin-left:10%;
-    background-color:#21418D ;
+.txt2{
+  padding-left: 55px;
+padding-bottom: 13px;
+}
+.bigicon{
+  width:80px;
+  height:80px;
 }

@@ -12,7 +12,7 @@ import { ProfileComponent } from './componet/profile/profile.component';
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
   },
   {
     path: '',
@@ -53,7 +53,7 @@ const routes: Routes = [
   },
   {
     path: 'enviar-centro',
-    loadChildren: () => import('./enviar-centro/enviar-centro.module').then( m => m.EnviarCentroPageModule)
+    loadChildren: () => import('./pages/enviar-centro/enviar-centro.module').then( m => m.EnviarCentroPageModule)
   },
   {
     path: 'devoluciones',

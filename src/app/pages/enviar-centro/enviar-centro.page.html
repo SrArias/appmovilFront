@@ -6,12 +6,16 @@
 
 <ion-item>
   <ion-label>Categoría</ion-label>
-  <ion-select placeholder="Select One">
-    <ion-select-option value="rdbTecno">Tecnología</ion-select-option>
-    <ion-select-option value="rdbPape">Papelería</ion-select-option>
-    <ion-select-option value="rdbVivi">Vivienda</ion-select-option>
-    <ion-select-option value="rdbAli">Alimentos</ion-select-option>
-    <ion-select-option value="rdbMov">Movilidad</ion-select-option>
+  <ion-select placeholder="Select One" (ionChange)="this.getproducts($event)">
+    <ion-select-option *ngFor="let category of listcategories" [value]="category.idcat" >{{category.strnomcat}}</ion-select-option>
+  </ion-select>
+</ion-item>
+
+
+<ion-item>
+  <ion-label>Producto</ion-label>
+  <ion-select placeholder="Select One" okText="Okay" cancelText="Dismiss">
+    <ion-select-option *ngFor="let product of listproduct" [value]="product.idprod">{{product.strnomprod}}</ion-select-option>
   </ion-select>
 </ion-item>
 
@@ -24,19 +28,15 @@
         Selecciona la categoría
       </ion-label>
     </ion-list-header>
-    
-    <ion-item>
+  
+    <!--<ion-item>
       <ion-label>Categoría</ion-label>
       <ion-select placeholder="Select One">
-        <ion-select-option value="rdbTecno">Tecnología</ion-select-option>
-        <ion-select-option value="rdbPape">Papelería</ion-select-option>
-        <ion-select-option value="rdbVivi">Vivienda</ion-select-option>
-        <ion-select-option value="rdbAli">Alimentos</ion-select-option>
-        <ion-select-option value="rdbMov">Movilidad</ion-select-option>
+        <ion-select-option *ngFor="let category of listcategories" [value]="category.idcat">{{category.strnomcat}}</ion-select-option>
       </ion-select>
-    </ion-item>
+    </ion-item>-->
   
-    <ion-item>
+    <!--<ion-item>
       <ion-label>Producto</ion-label>
       <ion-select value="brown" okText="Okay" cancelText="Dismiss">
         <ion-select-option value="brown">Brown</ion-select-option>
@@ -44,7 +44,7 @@
         <ion-select-option value="black">Black</ion-select-option>
         <ion-select-option value="red">Red</ion-select-option>
       </ion-select>
-    </ion-item>
+    </ion-item>-->
 
     <!-- Textarea in an item with a floating label -->
 <ion-item>

@@ -1,8 +1,23 @@
-<ion-list>
-  <ion-item *ngFor="let item of items">
-    <ion-thumbnail slot="start">
-      <ion-img [src]=""></ion-img>
-    </ion-thumbnail>
-    <ion-label>{{item.text}}</ion-label>
+<ion-header class="center">
+  <ion-toolbar>
+    <ion-title color="medium" size="small">
+      <h1>Categorias</h1>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-Item-group>
+  <ion-item *ngFor="let category of listcategories">
+    <ion-fab-button class="btn" (click)="this.prueba(category.idcat)" color="dark" ion-button full icon-only>
+      <img src="./../../../assets/img/CajaMenu.png">
+    </ion-fab-button>
+    <ion-label color="secondary" class="txt1">
+      <h4> {{category.strnomcat}}</h4>
+    </ion-label>
+
   </ion-item>
-</ion-list>
+
+
+
+
+</ion-Item-group>
