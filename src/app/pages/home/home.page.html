@@ -1,23 +1,41 @@
 <ion-header class="center">
-  <ion-toolbar>
-    <ion-title color="medium" size="small">
-      <h1>Categorias</h1>
-    </ion-title>
-  </ion-toolbar>
+
 </ion-header>
 
-<ion-Item-group>
+<ion-content class="background"></ion-content>
+
+
   <ion-item *ngFor="let category of listcategories">
-    <ion-fab-button class="btn" (click)="this.prueba(category.idcat)" color="dark" ion-button full icon-only>
-      <img src="./../../../assets/img/CajaMenu.png">
+    <ion-fab-button class="btn" (click)="this.prueba(category.idcat)" color="light" ion-button full icon-only>
+      <img src="{{category.strUrl}}">
     </ion-fab-button>
     <ion-label color="secondary" class="txt1">
-      <h4> {{category.strnomcat}}</h4>
+      <h2  style="color:#949499"> {{category.strnomcat}}</h2>
     </ion-label>
 
   </ion-item>
 
+  <!-- ion-fab-button -->
+<ion-content>
+  <ion-fab vertical="bottom" horizontal="start" edge slot="fixed">
 
+    <ion-fab-button class="ionfab" color="light" ion-button full icon-only>
+      <ion-icon style="color:#005851" name="grid-outline"></ion-icon>
+    </ion-fab-button>
 
+    <ion-fab-list side="top">
+      <ion-fab-button class="ionfabHome"><ion-icon style="color:#005851"  name="home-outline"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+ 
 
-</ion-Item-group>
+  <ion-fab-list side="top">
+    <ion-fab-button class="ionfabCenter"  [routerLink]="['../centros']"><ion-icon style="color:#005851"  name="cube-outline"></ion-icon></ion-fab-button>
+  </ion-fab-list>
+
+<ion-fab-list side="top">
+  <ion-fab-button class="ionfabRandom" [routerLink]="['../devoluciones']"><ion-icon style="color:#005851"  name="shuffle-outline"></ion-icon></ion-fab-button>
+</ion-fab-list>
+
+  </ion-fab>
+</ion-content>
+

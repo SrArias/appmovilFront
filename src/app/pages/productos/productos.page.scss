@@ -1,0 +1,35 @@
+ion-content.background{
+    --background: url("./../../../assets/img/fondoProductos4.PNG");
+    background-repeat: no-repeat;      
+  }
+
+.ionfabAdd{
+    height: 70px;
+    width: 70px;
+}
+
+.ionfab{
+  margin-left: 250px;
+  margin-top:-120px;
+  width:70px;
+  height:70px;
+}
+.ionfabHome{
+  margin-top:3px;
+  margin-left:180px;  
+  width:70px;
+  height:70px;
+}
+.ionfabCenter{
+  margin-top:3px;
+  margin-left:105px;  
+  width:70px;
+  height:70px;
+}
+
+.ionfabRandom{
+  margin-top:3px;
+  margin-left:30px;  
+  width:70px;
+  height:70px;
+}

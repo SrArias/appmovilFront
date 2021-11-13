@@ -1,29 +1,47 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>productos</ion-title>
-  </ion-toolbar>
-</ion-header>
+<!--<ion-content class="background"></ion-content> -->
 
 <ion-content>
+<img src="./../../../assets/img/Productos.PNG">
 
   <table class="table table-striped">
-    <thead>
-      <tr>
-        <th scope="col">Nombre</th>
-        <th scope="col">Cantidad</th>
-        <th scope="col">Fecha de ingreso</th>
-    
-      </tr>
-    </thead>
     <tbody>
       <tr *ngFor="let productos of listproduct">
         <th>{{productos.strnomprod}}</th>
         <th>{{productos.intuniprod}}</th>
-        <th>{{productos.dtfecha_ingreso | date:'dd/MM/yyy hh:mm'}}</th>
-       
+        <th>{{productos.dtfecha_ingreso | date:'dd/MM/yyy hh:mm'}}</th>       
       </tr>
-
     </tbody>
   </table>
+
+
+    <!-- fab placed to the top end -->
+    <ion-fab vertical="bottom" horizontal="bottom" slot="fixed">
+      <ion-fab-button class="ionfabAdd" color="light">
+        <ion-icon  class="ionfabAdd" style="color:#005851"  name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+
+       <!-- ion-fab-button -->
+
+   <ion-fab vertical="bottom" horizontal="start" edge slot="fixed">
+  
+    <ion-fab-button class="ionfab" color="light" ion-button full icon-only>
+      <ion-icon style="color:#005851" name="grid-outline"></ion-icon>
+    </ion-fab-button>
+
+    <ion-fab-list side="top">
+      <ion-fab-button class="ionfabHome" [routerLink]="['../../home']"><ion-icon style="color:#005851"  name="home-outline"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+ 
+
+  <ion-fab-list side="top">
+    <ion-fab-button class="ionfabCenter"  [routerLink]="['../../centros']"><ion-icon style="color:#005851"  name="cube-outline"></ion-icon></ion-fab-button>
+  </ion-fab-list>
+
+<ion-fab-list side="top">
+  <ion-fab-button class="ionfabRandom" [routerLink]="['../../devoluciones']"><ion-icon style="color:#005851"  name="shuffle-outline"></ion-icon></ion-fab-button>
+</ion-fab-list>
+
+  </ion-fab>
 
 </ion-content>

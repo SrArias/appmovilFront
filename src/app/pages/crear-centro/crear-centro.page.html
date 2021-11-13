@@ -1,11 +1,8 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>crearCentro</ion-title>
-  </ion-toolbar>
-</ion-header>
+<img src="./../../../assets/img/nuevoCentro.PNG">
 
-<ion-content>
 
+  <ion-content>
+    <ion-item-group class="caja">
 <!-- Textarea in an item with a floating label -->
 <ion-item>
   <ion-label position="floating">Nombre</ion-label>
@@ -36,7 +33,31 @@
   <ion-textarea></ion-textarea>
 </ion-item>
 
-<ion-button color="light">Agregar</ion-button>
+<ion-button class="btnAdd" color="light"><b>Agregar</b></ion-button>
+
+</ion-item-group>
 
 
-</ion-content>
+   <!-- ion-fab-button -->
+
+    <ion-fab vertical="bottom" horizontal="start" edge slot="fixed">
+  
+      <ion-fab-button class="ionfab" color="light" ion-button full icon-only>
+        <ion-icon style="color:#005851" name="grid-outline"></ion-icon>
+      </ion-fab-button>
+  
+      <ion-fab-list side="top">
+        <ion-fab-button class="ionfabHome" [routerLink]="['../home']"><ion-icon style="color:#005851"  name="home-outline"></ion-icon></ion-fab-button>
+      </ion-fab-list>
+   
+  
+    <ion-fab-list side="top">
+      <ion-fab-button class="ionfabCenter"  [routerLink]="['../centros']"><ion-icon style="color:#005851"  name="cube-outline"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+  
+  <ion-fab-list side="top">
+    <ion-fab-button class="ionfabRandom" [routerLink]="['../devoluciones']"><ion-icon style="color:#005851"  name="shuffle-outline"></ion-icon></ion-fab-button>
+  </ion-fab-list>
+  
+    </ion-fab>
+  </ion-content>

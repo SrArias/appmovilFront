@@ -1,0 +1,48 @@
+ion-select {
+    /* Applies to the value and placeholder color */
+    color: #545ca7;
+  
+    /* Set a different placeholder color */
+    --placeholder-color: #971e49;
+  
+    /* Set full opacity on the placeholder */
+    --placeholder-opacity: 1;
+  }
+
+.caja{
+    width: 300px;
+    margin-top: 20%;
+    margin-left: 10%;
+}
+
+.btnSend{
+  margin-top: 20%;
+  margin-left: 10%;
+  width: 70%;
+}
+
+.ionfab{
+    margin-left: 250px;
+    margin-top:-120px;
+    width:70px;
+    height:70px;
+  }
+  .ionfabHome{
+    margin-top:3px;
+    margin-left:180px;  
+    width:70px;
+    height:70px;
+  }
+  .ionfabCenter{
+    margin-top:3px;
+    margin-left:105px;  
+    width:70px;
+    height:70px;
+  }
+  
+  .ionfabRandom{
+    margin-top:3px;
+    margin-left:30px;  
+    width:70px;
+    height:70px;
+  }

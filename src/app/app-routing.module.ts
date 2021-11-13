@@ -62,7 +62,19 @@ const routes: Routes = [
   {
     path: 'productos/:id',
     loadChildren: () => import('./pages/productos/productos.module').then( m => m.ProductosPageModule)
+  },  {
+    path: 'pages',
+    loadChildren: () => import('./pages/pages.module').then( m => m.PagesPageModule)
+  },
+  {
+    path: 'centros',
+    loadChildren: () => import('./pages/centros/centros.module').then( m => m.CentrosPageModule)
+  },
+  {
+    path: 'pages',
+    loadChildren: () => import('./pages/pages.module').then( m => m.PagesPageModule)
   }
+
 
 
 

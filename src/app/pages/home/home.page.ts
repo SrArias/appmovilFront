@@ -12,15 +12,21 @@ export class HomePage implements OnInit {
   
   constructor(private router: Router, private categories: CategoriesService) {}
 
+
+
   ngOnInit() {
     this.getcategories();
   }
 
   prueba(msg) {
     
-    this.router.navigate([`/productos/${msg}`]);
+    this.router.navigate([`/productos/${msg}`]);    
    
   }
+
+  //goToCenters(){
+  //  this.router.navigate(['../centros'])
+  //}
 
   getcategories = async () => {
     await this.categories.getcategories().subscribe(

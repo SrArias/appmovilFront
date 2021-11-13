@@ -1,21 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { HomePage } from './home.page';
+import { CentrosPage } from './centros.page';
 
-
-
-describe('HomePage', () => {
-  let component: HomePage;
-  let fixture: ComponentFixture<HomePage>;
+describe('CentrosPage', () => {
+  let component: CentrosPage;
+  let fixture: ComponentFixture<CentrosPage>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ HomePage ],
+      declarations: [ CentrosPage ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(HomePage);
+    fixture = TestBed.createComponent(CentrosPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));
@@ -24,4 +22,3 @@ describe('HomePage', () => {
     expect(component).toBeTruthy();
   });
 });
-
