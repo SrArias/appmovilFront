@@ -16,7 +16,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'crear-producto/1',
+    redirectTo: 'home',
     pathMatch: 'full'
   },
   /*
@@ -52,7 +52,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/crear-centro/crear-centro.module').then( m => m.CrearCentroPageModule)
   },
   {
-    path: 'enviar-centro',
+    path: 'enviar-centro/:id',
     loadChildren: () => import('./pages/enviar-centro/enviar-centro.module').then( m => m.EnviarCentroPageModule)
   },
   {
@@ -62,7 +62,8 @@ const routes: Routes = [
   {
     path: 'productos/:id',
     loadChildren: () => import('./pages/productos/productos.module').then( m => m.ProductosPageModule)
-  },  {
+  },
+  {
     path: 'pages',
     loadChildren: () => import('./pages/pages.module').then( m => m.PagesPageModule)
   },

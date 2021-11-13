@@ -13,6 +13,16 @@ export class ProductsService {
       params: { intidcat },
     });
 
+    getone = (idprod) =>
+    this.http.get<any>(`${this.url}/oneP`, {
+      params: { idprod },
+    });
+
   crearProductos = (dataproductos) =>
     this.http.post(`${this.url}`, dataproductos);
+
+    actualizarProductos = (idprod,dataproductos) =>
+    this.http.put(`${this.url}/one`, dataproductos,{
+      params:{idprod},
+    });
 }

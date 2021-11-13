@@ -13,7 +13,7 @@
 <ion-item>
   <ion-label>Producto</ion-label>
   <ion-select placeholder="Select One" okText="Okay" cancelText="Dismiss">
-    <ion-select-option *ngFor="let product of listproduct" [value]="product.idprod">{{product.strnomprod}}</ion-select-option>
+    <ion-select-option *ngFor="let products of listproduct"  [value]="products">{{products.strnomprod}}</ion-select-option>
   </ion-select>
 </ion-item>
 
@@ -27,7 +27,8 @@
   <ion-input type="number"></ion-input>
 </ion-item>
 
-<h1>.</h1>
+<br>
+<br>
 
 
 <img src="./../../../assets/img/comentario1.PNG">
@@ -39,7 +40,7 @@
   </ion-list>
 
 
-  <ion-button  class="btnSend" color="light"><b>Enviar</b></ion-button>
+  <ion-button  class="btnSend" color="light" (click)="this.prueba()"><b>Enviar</b></ion-button>
 
 </ion-item-group>
 

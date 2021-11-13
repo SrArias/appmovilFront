@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import {
   FormGroup,
   FormBuilder,
@@ -19,7 +19,8 @@ export class CrearProductoPage implements OnInit {
   constructor(
     private actiedroute: ActivatedRoute,
     private formBuilder: FormBuilder,
-    private product: ProductsService
+    private product: ProductsService,
+    private router: Router
   ) {
     this.productosGroup = this.formBuilder.group({
       idprod: '',
@@ -43,7 +44,7 @@ export class CrearProductoPage implements OnInit {
   enviar() {
     this.product.crearProductos(this.productosGroup.value).subscribe(
       (res: any) => {
-        console.log(res);
+        this.router.navigate([`productos/${this.cat}`]);
       },
       (err) => console.log(err)
     );

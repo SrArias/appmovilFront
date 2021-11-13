@@ -1,12 +1,21 @@
 <!--<ion-content class="background"></ion-content> -->
-
+<ion-header>
+  <ion-title>Productos</ion-title>
+</ion-header>
 <ion-content>
-<img src="./../../../assets/img/Productos.PNG">
+<!--<img src="./../../../assets/img/Productos.PNG">-->
 
   <table class="table table-striped">
+    <thead class="tb" style="background-color: #c7ebdf;">
+      <tr>
+        <th>Nombre</th>
+        <th>Unidades</th>
+        <th>Fecha</th>
+      </tr>
+    </thead>
     <tbody>
       <tr *ngFor="let productos of listproduct">
-        <th>{{productos.strnomprod}}</th>
+        <th><ion-button color="secondary" (click)="this.one(productos)">{{productos.strnomprod}}</ion-button></th>
         <th>{{productos.intuniprod}}</th>
         <th>{{productos.dtfecha_ingreso | date:'dd/MM/yyy hh:mm'}}</th>       
       </tr>
@@ -16,7 +25,7 @@
 
     <!-- fab placed to the top end -->
     <ion-fab vertical="bottom" horizontal="bottom" slot="fixed">
-      <ion-fab-button class="ionfabAdd" color="light">
+      <ion-fab-button class="ionfabAdd" color="light" (click)="this.crear()">
         <ion-icon  class="ionfabAdd" style="color:#005851"  name="add"></ion-icon>
       </ion-fab-button>
     </ion-fab>

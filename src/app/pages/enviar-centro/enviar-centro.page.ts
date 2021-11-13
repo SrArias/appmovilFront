@@ -39,4 +39,9 @@ export class EnviarCentroPage implements OnInit {
       }
     );
   };
+
+
+  prueba=(r)=>{
+    
+  }
 }
