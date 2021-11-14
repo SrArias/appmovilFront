@@ -10,7 +10,7 @@ export class CenterService {
   constructor(private http: HttpClient) { }
 
   getcenters = () => this.http.get<any>(`${this.url}`);
-
+  sendcenters = (datacenter) => this.http.get<any>(`${this.url}`,datacenter);
 
 }
 

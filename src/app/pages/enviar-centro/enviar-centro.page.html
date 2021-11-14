@@ -13,8 +13,8 @@
 
 <ion-item>
   <ion-label>Producto</ion-label>
-  <ion-select placeholder="Select One" okText="Okay" cancelText="Dismiss">
-    <ion-select-option *ngFor="let products of listproduct"  [value]="products" formControlName="stridprod">{{products.strnomprod}}</ion-select-option>
+  <ion-select placeholder="Select One" okText="Okay" cancelText="Dismiss" formControlName="stridprod">
+    <ion-select-option *ngFor="let products of listproduct"  [value]="products" >{{products.strnomprod}}</ion-select-option>
   </ion-select>
 </ion-item>
 
