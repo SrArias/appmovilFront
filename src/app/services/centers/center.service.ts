@@ -12,6 +12,9 @@ export class CenterService {
   getcenters = () => this.http.get<any>(`${this.url}`);
   sendcenters = (datacenter) => this.http.get<any>(`${this.url}`,datacenter);
 
+  crearCentro = (datacenter) =>
+    this.http.post(`${this.url}`, datacenter);
+
 }
 
 

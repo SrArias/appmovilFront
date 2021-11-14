@@ -2,41 +2,44 @@
 
 
   <ion-content>
+
     <ion-item-group class="caja">
+      <form [formGroup]="centerGroup">
 <!-- Textarea in an item with a floating label -->
 <ion-item>
   <ion-label position="floating">Nombre</ion-label>
-  <ion-textarea></ion-textarea>
+  <ion-textarea formControlName="strnomcen"></ion-textarea>
 </ion-item>   
 
 <!-- Textarea in an item with a floating label -->
 <ion-item>
   <ion-label position="floating">Número de contacto</ion-label>
-  <ion-input type="number"></ion-input>
+  <ion-input type="number"  formControlName="strtelefono"></ion-input>
 </ion-item>
 
 <!-- Textarea in an item with a floating label -->
 <ion-item  >
   <ion-label position="floating">Departamento</ion-label>
-  <ion-textarea></ion-textarea>
+  <ion-textarea formControlName="strdepartamento"></ion-textarea>
 </ion-item>
 
 <!-- Textarea in an item with a floating label -->
 <ion-item  >
   <ion-label position="floating">Ciudad</ion-label>
-  <ion-textarea></ion-textarea>
+  <ion-textarea formControlName="strciudad"></ion-textarea>
 </ion-item>
 
 <!-- Textarea in an item with a floating label -->
 <ion-item  >
   <ion-label position="floating">Dirección</ion-label>
-  <ion-textarea></ion-textarea>
+  <ion-textarea formControlName="strdireccion"></ion-textarea>
 </ion-item>
 
-<ion-button class="btnAdd" color="light"><b>Agregar</b></ion-button>
+<ion-button class="btnAdd" color="light" (click)="this.enviar()" ><b>Agregar</b></ion-button>
+
+</form>
 
 </ion-item-group>
-
 
    <!-- ion-fab-button -->
 

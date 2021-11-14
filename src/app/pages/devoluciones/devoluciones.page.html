@@ -1,5 +1,6 @@
 <img src="./../../../assets/img/devoluciones.PNG">
 <ion-content>
+  <form [formGroup]="retprovGroup">
   <ion-item-group class="caja">
 
 <ion-item>
@@ -12,8 +13,8 @@
 
 <ion-item>
   <ion-label>Producto</ion-label>
-  <ion-select placeholder="Select One" okText="Okay" cancelText="Dismiss">
-    <ion-select-option *ngFor="let product of listproduct" [value]="product.idprod">{{product.strnomprod}}</ion-select-option>
+  <ion-select placeholder="Select One" okText="Okay" cancelText="Dismiss" formControlName="stridprod">
+    <ion-select-option *ngFor="let product of listproduct" [value]="products">{{product.strnomprod}}</ion-select-option>
   </ion-select>
 </ion-item>
 
@@ -24,7 +25,7 @@
     <!-- Textarea in an item with a floating label -->
 <ion-item>
   <ion-label position="floating">Cantidad enviada</ion-label>
-  <ion-input type="number"></ion-input>
+  <ion-input type="number" formControlName="intcandep"></ion-input>
 </ion-item>
 
 <h1>.</h1>
@@ -34,14 +35,17 @@
 
 <ion-item>
   <ion-label position="floating">R//</ion-label>
-  <ion-input></ion-input>
+  <ion-input  formControlName="strcomendep"></ion-input>
 </ion-item>  
   </ion-list>
 
+  <ion-button  class="btnSend" color="light" (click)="this.prueba()"><b>Enviar</b></ion-button>
 
-  <ion-button  class="btnSend" color="light"><b>Enviar</b></ion-button>
+
 
 </ion-item-group>
+
+</form>
 
    <!-- ion-fab-button -->
 

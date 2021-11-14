@@ -44,7 +44,7 @@ export class CrearProductoPage implements OnInit {
   enviar() {
     this.product.crearProductos(this.productosGroup.value).subscribe(
       (res: any) => {
-        this.router.navigate([`productos/${this.cat}`]);
+        this.router.navigate([`productos/${this.cat}`]);        
       },
       (err) => console.log(err)
     );
