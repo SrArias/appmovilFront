@@ -38,13 +38,21 @@ export class CrearCentroPage implements OnInit {
 
   enviar() {
     this.center.crearCentro(this.centerGroup.value).subscribe(
-      (res: any) => {
-        this.router.navigate([`centros`]);  
+      async(res: any) => {
+        const toast = await this.toastController.create({
+          color: 'dark',
+          duration: 2000,
+          message: 'Se creó el centro correctamente',
+        });   
+        await toast.present();
         this.centerGroup.reset();
+        this.router.navigate([`/centros`]).then(()=>{
+          window.location.reload();
+        });             
       },     
-      (err) => console.log(err)
+      (err) => console.log(err),  
 
-    );    
-  }
+    ); 
 
+}
 }

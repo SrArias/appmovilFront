@@ -34,13 +34,11 @@ export class DevolucionesPage implements OnInit {
     public toastController: ToastController,
     private router: Router
   ) {
-    this.retprovGroup=this.formBuilder.group(
-      {
+    this.retprovGroup=this.formBuilder.group({
+        stridprod: {},
         strcomendep:'',
-        intcandep:0,
-        stridprod: {}
-      }
-    )
+        intcandep:0,        
+      });
   }
 
   ngOnInit() {

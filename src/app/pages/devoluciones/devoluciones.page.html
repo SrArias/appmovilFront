@@ -13,8 +13,8 @@
 
 <ion-item>
   <ion-label>Producto</ion-label>
-  <ion-select placeholder="Select One" okText="Okay" cancelText="Dismiss" formControlName="stridprod">
-    <ion-select-option *ngFor="let product of listproduct" [value]="products">{{product.strnomprod}}</ion-select-option>
+  <ion-select placeholder="Select One" okText="Okay" cancelText="Dismiss" formControlName="stridprod" >
+    <ion-select-option *ngFor="let products of listproduct" [value]="products" >{{products.strnomprod}}</ion-select-option>
   </ion-select>
 </ion-item>
 
@@ -28,7 +28,9 @@
   <ion-input type="number" formControlName="intcandep"></ion-input>
 </ion-item>
 
-<h1>.</h1>
+<br>
+<br>
+
 
 
 <img src="./../../../assets/img/comentario1.PNG">

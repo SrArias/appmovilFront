@@ -70,7 +70,7 @@ export class ProductosPage implements OnInit {
 
       buttons: [
         {
-          text: 'Cancel',
+          text: 'Cancelar',
           role: 'cancel',
           cssClass: 'secondary',
           handler: () => {
@@ -78,7 +78,7 @@ export class ProductosPage implements OnInit {
           },
         },
         {
-          text: 'Crear',
+          text: 'Actualizar',
           role: 'create',
           cssClass: 'btn btn-secondary',
           handler: async (alertadata) => {
