@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CategoriesService } from 'src/app/services/categories/categories.service';
+import { Toast } from 'src/app/utils/utils';
 
 @Component({
   selector: 'app-home',

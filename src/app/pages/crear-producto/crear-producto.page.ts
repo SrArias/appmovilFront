@@ -7,6 +7,7 @@ import {
   FormControl,
 } from '@angular/forms';
 import { ProductsService } from 'src/app/services/products/products.service';
+import { route } from 'src/app/utils/utils';
 @Component({
   selector: 'app-crear-producto',
   templateUrl: './crear-producto.page.html',
@@ -44,7 +45,7 @@ export class CrearProductoPage implements OnInit {
   enviar() {
     this.product.crearProductos(this.productosGroup.value).subscribe(
       (res: any) => {
-        this.router.navigate([`productos/${this.cat}`]);        
+        route(`productos/${this.cat}`);      
       },
       (err) => console.log(err)
     );

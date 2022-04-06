@@ -8,6 +8,7 @@ import {
 } from '@angular/forms';
 import { CenterService } from 'src/app/services/centers/center.service';
 import { ToastController } from '@ionic/angular';
+import { Toast, route, reset } from 'src/app/utils/utils';
 
 @Component({
   selector: 'app-crear-centro',
@@ -27,32 +28,26 @@ export class CrearCentroPage implements OnInit {
     this.centerGroup = this.formBuilder.group({
       strtelefono: '',
       strdireccion: '',
-      strciudad:'',
-      strdepartamento:'',
-      strnomcen: '',    
+      strciudad: '',
+      strdepartamento: '',
+      strnomcen: '',
     });
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   enviar() {
     this.center.crearCentro(this.centerGroup.value).subscribe(
-      async(res: any) => {
-        const toast = await this.toastController.create({
+      async (res: any) => {
+        Toast({
           color: 'dark',
           duration: 2000,
           message: 'Se creó el centro correctamente',
-        });   
-        await toast.present();
-        this.centerGroup.reset();
-        this.router.navigate([`/centros`]).then(()=>{
-          window.location.reload();
-        });             
-      },     
-      (err) => console.log(err),  
-
-    ); 
-
-}
+        });
+        reset(this.centerGroup);
+        route(`/centros`);
+      },
+      (err) => console.log(err)
+    );
+  }
 }
